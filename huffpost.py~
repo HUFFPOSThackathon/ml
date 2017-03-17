@@ -12,7 +12,7 @@ def seperateByClass(dataset):
 	vector=[]
 	for i in range(len(dataset)):
 		vector=dataset[i]
-		vector[1].lower()
+		vector[1]=vector[1].lower()
 		if vector[1] not in seperated:
 			seperated[vector[1]]=vector
 	return seperated

@@ -11,7 +11,7 @@ def seperateByClass(dataset):
 	seperated={}
 	for i in range(len(dataset)):
 		vector=dataset[i]
-		vector[2].lower()
+		vector[2]=vector[2].lower()
 		if vector[2] not in seperated:
 			seperated[vector[2]]=0
 	for i in range(len(dataset)):

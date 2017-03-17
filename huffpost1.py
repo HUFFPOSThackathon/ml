@@ -19,18 +19,18 @@ def seperateByClass(dataset):
 		seperated[vector[2]]=seperated[vector[2]]+1
 	return seperated
 
-def summarize(dataset):
+def summarize(state,dataset):
 	summaries=''
 	for value in dataset:
 		summaries=summaries+value+" won "+str(dataset[value])+" seats , "
-	summaries=summaries+"in Uttar pradesh"
+	summaries=summaries+"in"+state
 	return summaries
-def summarizeByClass(dataset):
+def summarizeByClass(state,dataset):
 	seperated={}
 	seperated=seperateByClass(dataset)
 	summaries={}
 	for classvalue,instances in seperated.iteritems():
-		summaries[classvalue]=summarize(instances)
+		summaries[classvalue]=summarize(state,instances)
 	return summaries
 
 def summarizeByClass(dataset):
@@ -40,9 +40,8 @@ def summarizeByClass(dataset):
 	return summaries
 
 
-def main():
-	filename="/home/sukhad/up.csv"
+def statesumm(state,filename):
 	dataset=loadcsv(filename)
-	summ=summarizeByClass(dataset)
+	summ=summarizeByClass(state,dataset)
 	print summ
 main()
