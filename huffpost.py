@@ -41,6 +41,5 @@ def summarizeByClass(dataset):
 def constsummary(test,filename):
 	dataset=loadcsv(filename)
 	summ=summarizeByClass(dataset)
-	test='Shivpur'
 	print summ[test]
 main()

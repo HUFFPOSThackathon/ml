@@ -38,8 +38,7 @@ def summarizeByClass(dataset):
 	return summaries
 
 
-def main():
-	filename="/home/sukhad/up.csv"
+def constsummary(test,filename):
 	dataset=loadcsv(filename)
 	summ=summarizeByClass(dataset)
 	test='Shivpur'
